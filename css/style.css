@@ -1,0 +1,440 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1000px;
+    padding-left: .1rem;
+    padding-right: .1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* navbar */
+.menu {
+    position: relative;
+    background:#44749d;
+    
+}
+.menu-brand{
+    padding-left: 40px;
+}
+#list-menu {
+   list-style: none;
+   display: flex;
+   padding: 0;
+   margin: 0;
+   background: #44749d ;
+}
+#list-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#list-menu li{
+    flex: auto;
+    text-align: center;
+}
+#list-menu li{
+    flex: auto;
+    text-align: center;
+}
+#list-menu li a{
+    
+    text-align: center;
+    /* padding: 1em 1em; */
+    font-size: 18px;
+    display: block;
+    color: #fff;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+    position: relative;
+}
+
+#list-menu li a.active{
+    background: #fbb72c;
+}
+
+#list-menu li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    background: #fbb72c;
+    transition: all 300ms ease;
+    transition: 0.5s;
+    overflow: hidden;
+    opacity: 0.5;
+    color: #eaea;
+  }
+#list-menu li a:hover:before {
+    width: 100%;
+}
+/* navbar */
+
+/* kolom produk */
+.grid {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 2px;
+    counter-reset: div;
+}
+
+.col-2 {
+    padding: 10px;
+    grid-column: auto/span 2;
+}
+
+.col-3 {
+    padding: 10px;
+    grid-column: auto/span 3;
+}
+.col-4 {
+    padding: 10px;
+    grid-column: auto/span 4;
+}
+
+.col-6 {
+    padding: 10px;
+    grid-column: auto/span 6;
+}
+
+.col-8 {
+    padding: 10px;
+    grid-column: auto/span 8;
+}
+.col-10 {
+    padding: 10px;
+    grid-column: auto/span 10;
+}
+.col-12 {
+    padding: 10px;
+    grid-column: auto/span 12;
+    width: 100%;
+}
+/* kolom produk */
+
+/* produk card */
+.produk-card {
+    width: 100%;
+    position: relative;
+    box-shadow: 0 2px 7px #dfdfdf;
+    margin: 5px auto;
+    background: #fafafa;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+}
+
+.produk-tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    background: #f0f0f0;
+}
+.produk-tumb img{
+    width: 100%;
+    height: auto;
+}
+
+.produk-tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.produk-details {
+    padding: 30px;
+}
+
+.produk-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.produk-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.produk-details h4 a:hover {
+    color: #fbb72c;
+}
+
+.produk-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.produk-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.produk-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.produk-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 400;
+}
+
+.produk-price small {
+    font-size: 60%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.produk-links {
+    text-align: right;
+}
+
+.produk-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+    background-color: #44749d;
+    padding: 5px 10px;
+    box-shadow: 0 2px 7px #dfdfdf;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.produk-links a:hover {
+    background: #fbb72c;
+}
+/* produk card */
+.title{
+    padding: 10px;
+    border-bottom: 2px dotted  #44749d;
+    margin-bottom: 10px;
+}
+.text-center{
+    text-align: center;
+}
+/* kategori list */
+.kategori-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.kategori-list li{
+    margin-bottom: 10px;
+}
+.kategori-list li a{
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+    border-left: 2px solid #44749d;
+    position: relative;
+}
+.kategori-list li a:before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    bottom: 0;
+    border-bottom: 2px solid #fbb72c;
+    transition: 1s;
+}
+.kategori-list li a:hover:before{
+    width: 100%;
+}
+/* kategori list */
+
+/* form cari */
+.form-cari{
+    float: right;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.form-cari input{
+    border : none;
+    width: 100%;
+    border-bottom: 2px solid #44749d;
+    padding: 5px;
+}
+.form-cari input:focus{
+    outline-width: 0;
+}
+.form-cari button{
+    border : none;
+    border-bottom: 2px solid #44749d;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 15px;
+    background-color: #44749d;
+    padding: 5px 30px;
+    box-shadow: 0 2px 7px #dfdfdf;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* form cari */
+
+
+/* footer */
+.title-footer{
+    padding: 10px 0px;
+    border-bottom: 2px solid  #2b2a2a;
+    margin-bottom: 10px;
+    color: #2b2a2a;
+    font-size: 17px;
+}
+.footer {
+    position: relative;
+    background:#f0f0f0;
+    padding: 30px;
+    
+}
+.footer p{
+    margin-top: 10px;
+    color: #424141;
+}
+.footer-brand{
+    margin-top: 10px;
+}
+.footer-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.footer-list li a{
+    text-decoration: none;
+    color: #424141;
+    display: block;
+    width: 100%;
+    padding: 5px 0px;
+    position: relative;
+}
+/* footer */
+
+.detail-gambar{
+    width: 100%;
+    height: auto;
+}
+.detail-deskripsi table{
+    text-align: left;
+}
+.detail-deskripsi table a{
+    text-decoration: none;
+    color: #ec5151;
+}
+.m-auto{
+    margin: auto;
+}
+
+/* login */
+.card{
+    background-color: #eaeaea;
+    width: 50%;
+    padding: 20px;
+    box-shadow: 0 2px 7px #dfdfdf;
+}
+.w-100{
+    width: 100% !important;
+}
+.form-control
+{
+  border-radius: 12px;
+  height: 40px;
+  width : 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding : 10px;
+  border: none;
+  box-shadow: 0 2px 7px #a1a1a1;
+}
+.btn-primary{
+    border : none;
+    border-radius: 12px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #44749d;
+    padding: 5px 30px;
+    box-shadow: 0 2px 7px #a1a1a1;
+    cursor: pointer;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+.btn-danger{
+    border : none;
+    border-radius: 12px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    margin-top: 10px;
+    font-size: 15px;
+    background-color: #f34a4a;
+    padding: 5px 30px;
+    box-shadow: 0 2px 7px #a1a1a1;
+    cursor: pointer;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+/* table */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+  
+.table th {
+    background-color: #44749d;
+    color: white;
+}
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+.table tr:nth-child(even){background-color: #f2f2f2;}
+  
+.table tr:hover {background-color: #ddd;}
+/* form produk */
+.form-produk{
+    margin-top: 10px;
+}
